@@ -1,0 +1,95 @@
+.social {
+	height: 50px;
+	width: 100%;
+	position: absolute;
+	margin: 0 auto;
+	padding-left: 0 px;
+	text-align: center;
+	background-color: orange;
+	}
+
+.instagram {
+	}
+
+.twitter {
+
+	}
+
+.facebook {
+
+	}
+
+#container1{
+	height: 200px;
+	margin-left: auto ;
+	margin-right: auto ;
+	text-align: center;
+	position: inline-block;
+	margin: 70px;
+	padding: 100px;
+	}
+
+#intro {
+	height: 200px;
+	margin: 0 auto;
+	text-align: center;
+	}
+
+h1 {
+	font-size: 1100%;
+	font-family: 'Karma', serif;
+	margin: 70px;
+	}
+background {
+		background-image: url("http://blog.prashantgorule.com/wp-content/uploads/2012/01/the-sky-picture.jpg");
+		background-position: 100%;
+		background-repeat: none;
+		z-index: -1;
+}
+
+body {
+	background-image: url("http://blog.prashantgorule.com/wp-content/uploads/2012/01/the-sky-picture.jpg");
+	background-position: 100%;
+	z-index: -1;
+	}
+
+#nav {
+	padding: 0px, 0px, 0px, 0px;
+	height: 100px;
+	width: 100%;
+	position: absolute;
+	margin:0 auto;
+	text-align: center;
+	background-color: white;
+	font-family: 'Karma', serif;
+	font-size: 2em;
+	}
+
+ul {
+	text-align: center;
+	margin: 0 auto;
+}
+
+li {
+	text-align: center;
+	display: inline;
+	margin-right: 200px;
+	margin-top: 75px;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+	}
+
+a:visited {
+	text-decoration: none;
+	color: red;
+	}
+
+a:hover, a:active {
+	text-decoration: none;
+	color: red;
+	size: 2em;
+	}
+
