@@ -1,11 +1,7 @@
 .social {
 	height: 50px;
 	width: 100%;
-	position: absolute;
-	margin: 0 auto;
-	padding-left: 0 px;
 	text-align: center;
-	background-color: orange;
 	}
 
 .instagram {
@@ -20,13 +16,10 @@
 	}
 
 #container1{
-	height: 200px;
-	margin-left: auto ;
-	margin-right: auto ;
+	width: 100%;
 	text-align: center;
-	position: inline-block;
-	margin: 70px;
-	padding: 100px;
+	margin: 0px;
+	padding: 0px;
 	}
 
 #intro {
@@ -38,29 +31,20 @@
 h1 {
 	font-size: 1100%;
 	font-family: 'Karma', serif;
-	margin: 70px;
+	margin: 10px;
 	}
-background {
-		background-image: url("http://blog.prashantgorule.com/wp-content/uploads/2012/01/the-sky-picture.jpg");
-		background-position: 100%;
-		background-repeat: none;
-		z-index: -1;
-}
 
 body {
 	background-image: url("http://blog.prashantgorule.com/wp-content/uploads/2012/01/the-sky-picture.jpg");
 	background-position: 100%;
 	z-index: -1;
+	position: block;
 	}
 
 #nav {
-	padding: 0px, 0px, 0px, 0px;
-	height: 100px;
 	width: 100%;
-	position: absolute;
 	margin:0 auto;
 	text-align: center;
-	background-color: white;
 	font-family: 'Karma', serif;
 	font-size: 2em;
 	}
@@ -73,8 +57,7 @@ ul {
 li {
 	text-align: center;
 	display: inline;
-	margin-right: 200px;
-	margin-top: 75px;
+	margin-right: 10%;
 }
 
 a {
@@ -93,3 +76,17 @@ a:hover, a:active {
 	size: 2em;
 	}
 
+@media screen and (max-device-width: 480px) {
+li {
+	text-align: center;
+	position: block;
+	width: 100%;
+	margin-right: 0px;
+	}
+
+	h1 {
+	font-size: 100%;
+	font-family: 'Karma', serif;
+	margin: 10px;
+	}
+}
