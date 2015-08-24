@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+  <title>Willing and EnumerABLE</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="blog-template-stylsheet.css">
+</head>
+
+<main>
+  <h1>Willing and EnumerABLE</h1>
+  <h2>What's an enumerable and what's it doing on my block?</h2>
+  <h4>August 23, 2015</h4>
+
+  <section>
+    <p>
+      This week at Dev Bootcamp, we've taken the plunge into the Ruby deep end! We've been writing and testing methods and learning about all the glorious built-in Ruby methods. I want to explain a little bit about a public Ruby method called sort_by and talk about how it can be used IRL (in real life)!
+    <p>
+      <h2>sort_by</h2>
+        The "sort_by" method (function) that can be used to manipulate some data. The data can be all kinds of stuff - in Ruby, data can be stored in an array or a hash. "sort_by" can be extremely useful in organizing all the integers or strings or keys / values that may be inside that array or hash. You have to "call" sort_by on the structure your data is in. Calling is simply: <br>name_of_array.sort_by<br>But we're not done yet! We need to give the sort_by method a parameter, or rule, to sort the data. Do we want the data to be sorted from high to low or low to high? Alphabetically? To give sort_by a rule, we need to add a block. A block can help the method figure out what kind of sorting to do. Let's say we want to sort from smallest to largest. Then display the list of the data. This is what we'd code:<br>name_of_array.sort_by { |e| e }<br>Everything inside those {} is the block! The "e" inside the pipes is called the block parameter, and it's there to tell the method to pay attention to (and sort by) each element inside the array or hash. Next is "p e," which will p (a display command that's like a mix of puts and inspect commands) each of those elements we put between the pipes. Ta da! You're a ruby expert, now :)
+
+    </p>
+    <p>
+      Using sort_by can be used IRL for a number of different instances - pretty much any instance in which it's helpful to sort data in any comparative way. For example, a company has 40 sales associates, and each associate has a different number of accounts. Sales associates and their number of accounts are stored in a hash. The head manager of sales needs to see how many accounts each associate has, starting from the lowest number and ascending to the highest number. To come up with a list, that head manager could get a hold of the accounts hash, call sort_by, give it an enumerator that looks at keys and values, and sort / display the hash by value. At which point, the head manager's manager gives him a pay raise and a promotion - AND IT'S ALL BECAUSE OF RUBY.
+    </p>
+  </section>
+</main>
