@@ -2,3 +2,6 @@ main {
   background-color: orange;
   font-family: arial: serif;
 }
+li {
+  list-style-type: none;
+}
