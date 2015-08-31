@@ -1,3 +1,9 @@
+
+body {
+  background-image: url("https://41.media.tumblr.com/297681f0f989de15c70a1fe392651b1c/tumblr_ntyfzegYss1qcx0r0o1_1280.jpg");
+  background-position: 100%; 
+  z-index: -1;
+}
 main {
   background-color: orange;
   font-family: arial: serif;
