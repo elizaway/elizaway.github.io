@@ -23,8 +23,7 @@
  </div> 
  <div id="intro"> 
  	<h2>About Eliza</h2>
- 	<p>Expected graduation from <a href="http://devbootcamp.com/">DevBootcamp</a> December 2015.<br>Freelance graphic designer.<br>Located in Brooklyn, NY.</p></div> 
-  <p><a href="http://elizaway.github.io"><- Back</a></p>
+ 	<p>Expected graduation from <a href="http://devbootcamp.com/">DevBootcamp</a> December 2015.<br>Freelance graphic designer.<br>Located in Brooklyn, NY.</p><br><p><a href="http://elizaway.github.io"><- Back</a></p></div> 
   <div id="nav"> 
    <ul> 
      <li><a href="#">Resume</a></li> 
