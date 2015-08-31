@@ -8,6 +8,10 @@ main {
   background-color: orange;
   font-family: arial: serif;
 }
+ul {
+  Background-color: orange;
+}
 li {
   list-style-type: none;
+  border: 2px solid black;
 }
