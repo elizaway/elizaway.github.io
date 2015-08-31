@@ -9,6 +9,7 @@ main {
   font-family: arial: serif;
 }
 ul {
+  width: 50%;
 }
 li {
   list-style-type: none;
