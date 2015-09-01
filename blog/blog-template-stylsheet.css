@@ -10,6 +10,7 @@ main {
 }
 ul {
   width: 50%;
+  margin: 0px;
 }
 li {
   list-style-type: none;
