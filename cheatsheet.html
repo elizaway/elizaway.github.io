@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Eliza's Phase 0 CHEATSHEET</title>
+</head>
+
+<body>
+
+<h1>Eliza's DBC Phase 0 CHEATSHEET</h1>
+<p>Here's what you'll find on this page:</p>
+  <ul>
+    <li>Ruby Classes / Objects</li>
+    <li>Ruby Built-in Methods</li>
+    <li>Ruby Enumerables</li>
+    <li>Ruby Hashes, Arrays, Strings, Integers</li>
+    <li>JavaScript Objects</li>
+    <li>JavaScript Prototypes</li>
+    <li>HTML5</li>
+    <li>CSS Positioning</li>
+    <li>SQL</li>
+  </ul>
+
+
+
+  <h2>Ruby Classes / Objects:</h2>
+    <p>I've found the best way for me recall what something is and how to make it in Ruby is to look at an example. So here are some examples of classes and objects in Ruby:</p>
+
+<img src="imgs/classes.objects.Ruby.png" width="70%">
+
+  <h2>Ruby Built-in Methods</h2>
+    <p>Don't reinvent the wheel! Instead, manipulate objects in Ruby using built-in methods. Here are some common built-in methods, but if you need more, consult Ruby Documenation on <a href="http://ruby-doc.org/core-2.2.0/String.html">strings</a>, <a href="http://ruby-doc.org/core-2.2.0/Array.html">arrays</a>, <a href="http://ruby-doc.org/core-2.2.0/Object.html">objects</a>, and <a href="http://ruby-doc.org/core-2.2.0/Class.html">classes</a>.</p>
+
+<strong><p>gsub( x, y)</p></strong>
+<strong><p>gsub( x) {...}</p></strong>
+  <p>Replaces all strings matching x in $_ with y. If a block is specified, matched strings are
+  replaced with the result of the block. The modified result is assigned to $_.</p>
+<strong><p>p( obj)</p></strong>
+  <p>Displays obj using its inspect method (often used for debugging).</p>
+<strong><p>print([ arg...])</p></strong>
+  <p>Prints arg to $defout. If no arguments are specified, the value of $_ is printed.</p>
+<strong><p>puts([ str])</p></strong>
+  <p>Prints string to the default output ($defout). If the string doesn't end with a newline, a
+  newline is appended to the string.</p>
+<strong><p>string.to_i</p></strong>
+  <p>Converts a string into an integer</p>
+<strong><p>rand() or rand(num) or rand(num...num)</p></strong>
+  <p>Generates random number: if no argument given, random number between 0 and 1; if one argument given, random number between 0 and num; if range given, random number between first num and second num.
+  # this generates a number between 0 to 8</p>
+<strong><p>int.to_s</p></strong>
+  <p>Converts an interger into an string.</p>
+<strong><p>string.split("") or string.split()</p></strong>
+  <p>W<p>ith argument "", separates each character of a string with ""s inside an array. Without argument, puts string into array.</p>
+<strong><p>.join("")</p></strong>
+<strong><p>sleep([sec])</p></strong>
+  <p>Suspends program execution for sec seconds. If no argument, the program pulls a sleeping beauty...it sleeps forever!</p>
+<strong><p>sub(x) {...}</p></strong>
+  <p>Replaces the first string matching x in $_ with y. If a block is specified, matched strings are
+  replaced with the result of the block. The modified result is assigned to $_.</p>
+<strong><p>integer.times {|n| ...}</p></strong>
+  <p>Iterates the block n times.</p>
+<strong><p>float_num.floor</p></strong>
+  <p>Rounds a float (number with a decimal) down to the lowest whole number.</p>
+
+<h2>Ruby Enumerables</h2>
+<p>Enumerables are a bunch of fancy methods that loop through data structures in Ruby. A full list of enumerables is available in <a href="http://ruby-doc.org/">Ruby Docs</a>. Here are some commonly used ones:
+
+<p><strong>.each</strong> returns the original object it was called on because it's really used for its side effects and not what it returns. So each doesn't alter data; it just messes with it, returns the mess, then straightens the data back up to it's original form.</p>
+<p><strong>.map</strong> returns a new array filled with whatever gets returned by the block each time it runs.</p>
+<p>When I started learning Ruby enumerable methods, I didn't understand the difference between map and each. But now I do and here's the diff, in screenshot form:</p>
+<img src="imgs/mapeach.png" width="70%">
+<p><strong>.each_with_index</strong> passes not just the current item but whatever position in the array it was located in.</p>
+<p><strong>.select</strong> returns a new object (e.g. array) filled with only those original items where the block you gave it returned true</p>
+<p><strong>.inject</strong> (aka .reduce) passes not just the element but whatever was returned by the previous iteration into the block. This one is hard to understand!</p>
+
+
+<p><strong>.any?</strong> returns true/false (see the question mark?) and answers the question, "do ANY of the elements in this object pass the test in my block?". If your block returns true on any time it runs, any? will return true.</p>
+<p><strong>.all?</strong> returns true/false and answers the question, "do ALL the elements of this object pass the test in my block?". Every time the block runs it must return true for this method to return true.</p>
+<p><strong>.none?</strong> returns true only if NONE of the elements in the object return true when the block is run.</p>
+<p><strong>.find</strong> returns the first item in your object.</p>
+<p><strong>.group_by</strong> will run your block and return a hash that groups all the different types of returns from that block.</p>
+<p><strong>.grep</strong> returns an array with those items that actualy match the specified criteria, like this: names_with_cap_J = ["James", "Hannah", "Hector"].grep(/J/) => ["James"]</p>
+<p><strong>.include?</strong> returns a boolean true / false if a collection contains whatever you put in the argument</p>
+<p><strong>.sort</strong> returns collection reordered based on argument, or without argument, in order from smallest to largest</p>
+<p><strong>.count</strong> returns an integer similar to .length; integer how many characters or elements is in a collection.</p>
+
+<h2>Ruby Hashes, Arrays, Strings, Integers</h2>
+  <ul>
+    <li><strong>Array</strong> - a collection of data stored inside a pair of []s. Each item in a array is called an element; data inside arrays can be nested.</li>
+    <li><strong>Hash</strong> - sometimes called an "associative array"; a collection of data stored inside a pair of {}s; main difference between a hash and an array is that each element inside has a pair index, which can be any type of object. Like arrays, data inside hashes can be nested.</li>
+    <li><strong>String</strong> - is a collection of characters inside a pair of ''s or ""s. These can be elements of an array or hash. Certain built-in methods that only can be applied to strings.</li>
+    <li><strong>Integer</strong> - is a number object. There is a subclass of integer called float, which is a numerical object that has a decimal point.
+  </ul>
+<hr>
+<h2>JavaScript Objects</h2>
+<p>Javascript objects are similar to Ruby arrays: they are a collection of key-value pairs stored inside {}s. Here's an example of one:</p>
+      ![obj.png](imgs/obj.png)
+<p>Objects in JS can be made in two ways: object literal notation or object constructor. Here they are:</p>
+<img src="imgs/objlit.png" width="70%">
+
+<p>Object literal is the way most JS objects are made because easier to read and will work under any condition.</p>
+<p>To call and / or assign new value pairs (called attributes) to a JS object, use the dot notation like in the example. Person.name = "Tom" MAKES the name attribute have the value of "Tom". console.log(Person.name); DISPLAYS the value of the name attribute of Person.</p>
+
+<h2>JavaScript Prototypes</h2>
+<p>JavaScript objects inherit the properties and methods from their prototype. It's similar to how Ruby instances of objects inherit properties from their class. Objects created using an object literal inherit from a prototype called Object.prototype, automatically.</p>
+<p>The standard way to create an object prototype is to use an object constructor function like this:</p>
+<img src="imgs/prototype.png" width="70%">
+<hr>
+<h2>HTML5</h2>
+<a href="https://imh01-inmotionhosting1.netdna-ssl.com/img/infographics/html5_cheat_sheet_tags.png">
+  <img src="https://imh01-inmotionhosting1.netdna-ssl.com/img/infographics/html5_cheat_sheet_tags.png" alt="html5-cheatsheet" style="width:70%;">
+</a>
+<p>Credit: <a href="https://www.inmotionhosting.com">Inmotion Hosting</a></p>
+<hr>
+<h2>CSS Positioning</h2>
+<img src="imgs/css.png" width="70%">
+
+<p>Credit: <a href="https://thewc.co/">Women's Coding Collective</a></p>
+<hr>
+<h2>SQL</h2>
+<p>There are some rules that every SQL table should follow. Here they are:</p>
+<h3>SQL Table Rules:</h3>
+<ul>
+  <li>Table names are pluralized, e.g., "students," "products," "todos," etc.</li>
+  <li>Each row is uniquely identified by an automatically-incrementing integer field called id. ActiveRecord migrations do this for you automatically, but you'll have to be explicit when designing your tables by hand.</li>
+  <li>Fields are named using snake_case, rather than camelCase. The latter looks weird and out of place in Ruby.</li>
+  <li>Fields that involve dates or times end in _at or _on (created_at, updated_at, completed_at, etc.) unless it's really obvious they already refer to something time-related. For example, it's more common to say birthday than born_on.</li>
+  <li>When in doubt, make your field and table names as self-explanatory as possible. Avoid field names like type, kind, status, etc. They could refer to anything! Err on the side of clarity, even if it seems verbose. Other programmers will appreciate it, and computers don't care if your field name is 20 characters long rather than 5 characters long.</li>
+  <li>Rails includes created_at and updated_at fields by default, which record when a row is first added to a table and when it was last updated. They are good to include for records, so they will often be included in schemas.</li>
+</ul>
+<h3>Primary Keys in SQL Tables:</h3>
+<p>Each row in a database table should have a primary key. This is a field (or collection of fields) which uniquely identify that row from all other rows. Rails defaults to using a synthetic primary key, which is just an arbitrary, auto-incrementing integer usually denoted by the field name id. It's called "synthetic" because it doesn't have any inherent meaning.</p>
+<p>The assumption that the primary key is an auto-incrementing integer called id is baked deeply into Rails. Most web applications follow this convention.</p>
+
+<h3>Foreign Keys in SQL Tables:</h3>
+
+<p>Foreign keys are used to connect one table to another. Generally they will be used to connect a primary key (ie. id) to another table with a field for that primary key as well.</p>
+
+<h3>SQL Table Relationships:</h3>
+<p>With SQL tables, data from table to table must be able talk to each other and know each other's values in order to provide seamless results to queries. You can connect tables to other tables by knowing what their relationship is. There are two types:</p>
+<ul>
+  <li><strong>One-to-One Relationship</strong> - One-to-one relationships associate one record in one table with a single record in the other table.</li>
+  <li><strong>One-to-Many Relationship</strong> - One-to-many relationships associate one record in one table with many records in the other table.</li>
+  <p>Examples:</p>
+<img src="imgs/states_region.png" width="70%">
+<img src="imgs/persons.outfits-sql.png" width="70%">
+
+</body>
+
+</html>
