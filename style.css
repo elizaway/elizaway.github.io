@@ -1,92 +1,75 @@
 .social {
-	height: 50px;
 	width: 100%;
 	text-align: center;
-	}
+	margin: 0 0 20px 0;
+}
 
-.instagram {
-	}
+.standardContainer {
+	padding: 5%;
+}
 
-.twitter {
-
-	}
-
-.facebook {
-
-	}
-
-#container1{
-	width: 100%;
-	text-align: center;
-	margin: 0px;
-	padding: 0px;
-	}
-
-#intro {
-	height: 200px;
-	margin: 0 auto;
-	text-align: center;
-	}
-
-h1 {
-	font-size: 1100%;
-	font-family: 'Karma', serif;
+.bigHeadline {
+	font-size: 3em;
+	font-family: 'Questrial', sans-serif;
 	margin: 10px;
-	}
+}
+
+.text {
+	text-align: center;
+}
 
 body {
-	background-image: url("http://blog.prashantgorule.com/wp-content/uploads/2012/01/the-sky-picture.jpg");
+/*	background-image: url("http://blog.prashantgorule.com/wp-content/uploads/2012/01/the-sky-picture.jpg");
 	background-position: 100%;
-	z-index: -1;
-	position: block;
-	}
+	z-index: -1; */
+	font-family: 'Cutive Mono', monospace;
+}
 
-#nav {
+.navbar {
 	width: 100%;
 	margin:0 auto;
 	text-align: center;
-	font-family: 'Karma', serif;
-	font-size: 2em;
-	}
-
-ul {
-	text-align: center;
-	margin: 0 auto;
+	font-family: 'Questrial', sans-serif;
+	font-size: 1em;
+	margin: 30px 0 30px 0;
 }
 
-li {
+.socialLinks {
 	text-align: center;
+	margin: 0 20px;
+	    display: inline-block;
+
+}
+
+.linked {
+	background: url('imgs/linked.png') center center no-repeat;
+	background-size: contain;
+  height: 50px;
+}
+
+.twit {
+	background: url('imgs/twit.png') center center no-repeat;
+	background-size: contain;
+  height: 50px;
+}
+.navbarItem {
 	display: inline;
-	margin-right: 10%;
+	margin: 0 20px;
+	font-weight: 800;
 }
 
 a {
 	text-decoration: none;
 	color: black;
-	}
+	font-size: 1em;
+}
 
-a:visited {
-	text-decoration: none;
-	color: red;
-	}
 
 a:hover, a:active {
-	text-decoration: none;
-	color: red;
-	size: 2em;
-	}
+
+}
 
 @media screen and (max-device-width: 480px) {
-li {
-	text-align: center;
-	position: block;
-	width: 100%;
-	margin-right: 0px;
-	}
 
-	h1 {
-	font-size: 100%;
-	font-family: 'Karma', serif;
-	margin: 10px;
 	}
 }
